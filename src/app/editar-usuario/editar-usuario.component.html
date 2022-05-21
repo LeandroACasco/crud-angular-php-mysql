@@ -1,28 +1,29 @@
-<h2>Agregar mascota <mat-icon>pets</mat-icon></h2>
-<form (ngSubmit)="onSubmit()" #formMascota="ngForm">
+<h2>Editar Usuario <mat-icon>pets</mat-icon></h2>
+<form (ngSubmit)="onSubmit()" #formUsuario="ngForm">
     <p>
-
         <mat-form-field>
-            <input matInput name="nombre" [(ngModel)]="mascotaModel.nombre"
+            <input matInput name="nombre" [(ngModel)]="Usuario.user"
                 type="text"
                 placeholder="Nombre">
         </mat-form-field>
     </p>
     <p>
         <mat-form-field>
-            <input matInput name="raza" [(ngModel)]="mascotaModel.raza"
+            <input matInput name="raza" [(ngModel)]="Usuario.pass"
                 type="text"
                 placeholder="Raza">
         </mat-form-field>
     </p>
     <p>
         <mat-form-field>
-            <input matInput name="edad" [(ngModel)]="mascotaModel.edad"
+            <input matInput name="edad" [(ngModel)]="Usuario.fecha"
                 type="number"
                 placeholder="Edad">
         </mat-form-field>
     </p>
     <p>
         <button type="submit" mat-flat-button color="accent">Guardar</button>
+        &nbsp;
+        <button (click)="volver()" type="button" mat-flat-button color="primary">Volver</button>
     </p>
 </form>
